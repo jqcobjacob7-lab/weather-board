@@ -1,0 +1,240 @@
+-- Voucher Type
+insert
+into
+voucher_type
+(id,
+created_by,
+created_date,
+last_modified_by,
+last_modified_date,
+name,
+default_voucher, voucher_group
+)
+values((SELECT nextval('voucher_type_seq')),
+'one-finance-account',
+current_date,
+'one-finance-account',
+current_date,
+'Bank Payment',
+true,'Payment Vouchers'
+);
+insert
+into
+voucher_type
+(id,
+created_by,
+created_date,
+last_modified_by,
+last_modified_date,
+name,
+default_voucher, voucher_group
+)
+values((SELECT nextval('voucher_type_seq')),
+'one-finance-account',
+current_date,
+'one-finance-account',
+current_date,
+'Cash Payment',
+true,'Payment Vouchers'
+);
+insert
+into
+voucher_type
+(id,
+created_by,
+created_date,
+last_modified_by,
+last_modified_date,
+name,
+default_voucher, voucher_group
+)
+values((SELECT nextval('voucher_type_seq')),
+'one-finance-account',
+current_date,
+'one-finance-account',
+current_date,
+'Bank Receipt',
+true,'Receipt Vouchers'
+);
+
+insert
+into
+voucher_type
+(id,
+created_by,
+created_date,
+last_modified_by,
+last_modified_date,
+name,
+default_voucher, voucher_group
+)
+values((SELECT nextval('voucher_type_seq')),
+'one-finance-account',
+current_date,
+'one-finance-account',
+current_date,
+'Cash Receipt',
+true,'Receipt Vouchers'
+);
+insert
+into
+voucher_type
+(id,
+created_by,
+created_date,
+last_modified_by,
+last_modified_date,
+name,
+default_voucher, voucher_group
+)
+values((SELECT nextval('voucher_type_seq')),
+'one-finance-account',
+current_date,
+'one-finance-account',
+current_date,
+'Journal Vouchers',
+true,'Journal Vouchers'
+);
+insert
+into
+voucher_type
+(id,
+created_by,
+created_date,
+last_modified_by,
+last_modified_date,
+name,
+default_voucher, voucher_group
+)
+values((SELECT nextval('voucher_type_seq')),
+'one-finance-account',
+current_date,
+'one-finance-account',
+current_date,
+'Debit Note',
+true,'Debit Vouchers'
+);
+insert
+into
+voucher_type
+(id,
+created_by,
+created_date,
+last_modified_by,
+last_modified_date,
+name,
+default_voucher, voucher_group
+)
+values((SELECT nextval('voucher_type_seq')),
+'one-finance-account',
+current_date,
+'one-finance-account',
+current_date,
+'Credit Note',
+true,'Credit Vouchers'
+);
+insert
+into
+voucher_type
+(id,
+created_by,
+created_date,
+last_modified_by,
+last_modified_date,
+name,
+default_voucher, voucher_group
+)
+values((SELECT nextval('voucher_type_seq')),
+'one-finance-account',
+current_date,
+'one-finance-account',
+current_date,
+'Contra Vouchers',
+true,'Contra Vouchers'
+);
+
+
+
+
+
+
+
+
+
+
+insert
+into
+voucher_type
+(id,
+created_by,
+created_date,
+last_modified_by,
+last_modified_date,
+name,
+default_voucher, voucher_group
+)
+values((SELECT nextval('voucher_type_seq')),
+'one-finance-account',
+current_date,
+'one-finance-account',
+current_date,
+'Sales Vouchers',
+true,'Sales Vouchers');
+insert
+into
+voucher_type
+(id,
+created_by,
+created_date,
+last_modified_by,
+last_modified_date,
+name,
+default_voucher, voucher_group
+)
+values((SELECT nextval('voucher_type_seq')),
+'one-finance-account',
+current_date,
+'one-finance-account',
+current_date,
+'Purchase Vouchers',
+true,'Purchase Vouchers'
+);
+insert
+into
+voucher_type
+(id,
+created_by,
+created_date,
+last_modified_by,
+last_modified_date,
+name,
+default_voucher, voucher_group
+)
+values((SELECT nextval('voucher_type_seq')),
+'one-finance-account',
+current_date,
+'one-finance-account',
+current_date,
+'Cash Vouchers',
+true,'Cash Vouchers'
+);
+insert
+into
+voucher_type
+(id,
+created_by,
+created_date,
+last_modified_by,
+last_modified_date,
+name,
+default_voucher, voucher_group
+)
+values((SELECT nextval('voucher_type_seq')),
+'one-finance-account',
+current_date,
+'one-finance-account',
+current_date,
+'Non-Cash or Transfer Vouchers',
+true,
+'Non-Cash or Transfer Vouchers'
+);

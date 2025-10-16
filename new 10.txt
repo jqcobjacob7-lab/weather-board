@@ -1,0 +1,257 @@
+
+insert
+into
+account_ledger
+(id,
+created_by,
+created_date,
+last_modified_by,
+last_modified_date,
+account_group_id,
+name,
+default_account
+)
+values((SELECT nextval('account_ledger_seq')),
+'one-finance-account',
+current_date,
+'one-finance-account',
+current_date,
+(select id from account_group where name='Cost of Goods Sold'),
+'Container Damage Charges',
+true
+);
+
+insert
+into
+account_statement
+(id,
+created_by,
+created_date,
+last_modified_by,
+last_modified_date,
+account_ledger_name,
+accounting_date,
+active,
+closing_balance,
+opening_balance,
+credited_amount,
+debited_amount
+)
+values((SELECT nextval('account_statement_seq')),
+'one-finance-account',
+current_date,
+'one-finance-account',
+current_date,
+'Container Damage Charges',
+current_date,
+false,
+0,
+0,
+0,
+0
+);
+insert
+into
+account_ledger
+(id,
+created_by,
+created_date,
+last_modified_by,
+last_modified_date,
+account_group_id,
+name,
+default_account
+)
+values((SELECT nextval('account_ledger_seq')),
+'one-finance-account',
+current_date,
+'one-finance-account',
+current_date,
+(select id from account_group where name='Cost of Goods Sold'),
+'Clearing Charges',
+true
+);
+
+insert
+into
+account_statement
+(id,
+created_by,
+created_date,
+last_modified_by,
+last_modified_date,
+account_ledger_name,
+accounting_date,
+active,
+closing_balance,
+opening_balance,
+credited_amount,
+debited_amount
+)
+values((SELECT nextval('account_statement_seq')),
+'one-finance-account',
+current_date,
+'one-finance-account',
+current_date,
+'Clearing Charges',
+current_date,
+false,
+0,
+0,
+0,
+0
+);
+
+insert
+into
+account_ledger
+(id,
+created_by,
+created_date,
+last_modified_by,
+last_modified_date,
+account_group_id,
+name,
+default_account
+)
+values((SELECT nextval('account_ledger_seq')),
+'one-finance-account',
+current_date,
+'one-finance-account',
+current_date,
+(select id from account_group where name='Cost of Goods Sold'),
+'Transportation Charges',
+true
+);
+
+insert
+into
+account_statement
+(id,
+created_by,
+created_date,
+last_modified_by,
+last_modified_date,
+account_ledger_name,
+accounting_date,
+active,
+closing_balance,
+opening_balance,
+credited_amount,
+debited_amount
+)
+values((SELECT nextval('account_statement_seq')),
+'one-finance-account',
+current_date,
+'one-finance-account',
+current_date,
+'Transportation Charges',
+current_date,
+false,
+0,
+0,
+0,
+0
+);
+
+insert
+into
+account_ledger
+(id,
+created_by,
+created_date,
+last_modified_by,
+last_modified_date,
+account_group_id,
+name,
+default_account
+)
+values((SELECT nextval('account_ledger_seq')),
+'one-finance-account',
+current_date,
+'one-finance-account',
+current_date,
+(select id from account_group where name='Cost of Goods Sold'),
+'Container Damage Charges',
+true
+);
+insert
+into
+account_statement
+(id,
+created_by,
+created_date,
+last_modified_by,
+last_modified_date,
+account_ledger_name,
+accounting_date,
+active,
+closing_balance,
+opening_balance,
+credited_amount,
+debited_amount
+)
+values((SELECT nextval('account_statement_seq')),
+'one-finance-account',
+current_date,
+'one-finance-account',
+current_date,
+'Container Damage Charges',
+current_date,
+false,
+0,
+0,
+0,
+0
+);
+insert
+into
+account_ledger
+(id,
+created_by,
+created_date,
+last_modified_by,
+last_modified_date,
+account_group_id,
+name,
+default_account
+)
+values((SELECT nextval('account_ledger_seq')),
+'one-finance-account',
+current_date,
+'one-finance-account',
+current_date,
+(select id from account_group where name='Cost of Goods Sold'),
+'Ocean Freight',
+true
+);
+
+insert
+into
+account_statement
+(id,
+created_by,
+created_date,
+last_modified_by,
+last_modified_date,
+account_ledger_name,
+accounting_date,
+active,
+closing_balance,
+opening_balance,
+credited_amount,
+debited_amount
+)
+values((SELECT nextval('account_statement_seq')),
+'one-finance-account',
+current_date,
+'one-finance-account',
+current_date,
+'Ocean Freight',
+current_date,
+false,
+0,
+0,
+0,
+0
+);

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Details</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        input, button { padding: 8px; margin: 5px 0; width: 300px; }
+        .response { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h2>Enter User Details</h2>
+    <form id="userForm">
+        <input type="text" id="userName" placeholder="Userame" required /><br/>
+        <input type="password" id="password" placeholder="Password" required /><br/>
+        <input type="text" id="name" placeholder="Full Name" required /><br/>
+        <input type="email" id="email" placeholder="Email" required /><br/>
+        <input type="number" id="age" placeholder="Age" required /><br/>
+        <button type="submit">Save User</button>
+    </form>
+
+    <div class="response" id="response"></div>
+
+    <script>
+        document.getElementById('userForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const userDTO = {
+                userName: document.getElementById('userName').value,
+                password: document.getElementById('password').value,
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                age: parseInt(document.getElementById('age').value)
+            };
+
+            fetch('http://localhost:8080/user/add', {  // replace port if needed
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(userDTO)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to save user');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Redirect to login.html after successful save
+                window.location.href = 'login.html';
+            })
+            .catch(error => {
+                document.getElementById('response').innerHTML = `<span style="color:red">${error}</span>`;
+            });
+        });
+    </script>
+</body>
+</html>
